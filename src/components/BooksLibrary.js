@@ -21,11 +21,11 @@ const books = [
   },
   {
     id: 3,
-    title: 'Capital in the Twenty-First Century',
-    genres: 'Economy',
-    progress: 18,
-    author: 'Suzanne Collins',
-    chapter: 8,
+    title: 'The Dreaming City',
+    genres: 'Fantasy',
+    progress: 16,
+    author: 'Michael Moorcock',
+    chapter: 3,
   },
 ];
 

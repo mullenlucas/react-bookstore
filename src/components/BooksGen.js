@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -23,7 +22,11 @@ function Book(props) {
       </div>
 
       <div className="book-progress">
-        <h3 className="book-percentage">{ book.progress } %</h3>
+        <h3 className="book-percentage">
+          { book.progress }
+          {' '}
+          %
+        </h3>
         <h4 className="book-completion">Completed</h4>
       </div>
 
@@ -37,12 +40,8 @@ function Book(props) {
   );
 }
 
-// Book.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   author: PropTypes.string.isRequired,
-//   genre: PropTypes.string.isRequired,
-//   progress: PropTypes.string.isRequired,
-//   chapter: PropTypes.string.isRequired,
-// };
+Book.propTypes = {
+  book: PropTypes.string.isRequired,
+};
 
 export default Book;
