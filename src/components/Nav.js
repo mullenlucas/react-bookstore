@@ -5,8 +5,10 @@ function Header() {
   return (
     <header>
       <h1>AP Bookstore</h1>
-      <NavLink to="/" className="link">Books</NavLink>
-      <NavLink to="/categories" className="link">Categories</NavLink>
+      <div className="h-links">
+        <NavLink to="/" className="link">Books</NavLink>
+        <NavLink to="/categories" className="link">Categories</NavLink>
+      </div>
     </header>
   );
 }
