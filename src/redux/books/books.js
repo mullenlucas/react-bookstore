@@ -1,6 +1,6 @@
-// Actions for books 
-const ADD_BOOK   = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK'
+// Actions for books
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [];
 
@@ -21,8 +21,8 @@ export const addBook = (book) => ({
   type: ADD_BOOK, book,
 });
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK, id,
+export const removeBook = (book) => ({
+  type: REMOVE_BOOK, book,
 });
 
 export default reducerbookstore;
