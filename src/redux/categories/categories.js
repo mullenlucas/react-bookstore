@@ -4,7 +4,7 @@ const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 const initialState = [];
 
 // Reducer section
-const categReducerStatusChecker = (state = initialState, action) => {
+const reducerBookCategories = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return 'Pending...';
@@ -15,4 +15,4 @@ const categReducerStatusChecker = (state = initialState, action) => {
 // Action creators section
 export const statusChecker = (category) => ({ type: CHECK_STATUS, category });
 
-export default categReducerStatusChecker;
+export default reducerBookCategories;
