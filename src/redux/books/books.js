@@ -33,7 +33,7 @@ const initialState = [
 const reducerBookstore = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.book];
+      return state.concat(action.book);
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.id);
     default:
