@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 function Book(props) {
   const {
     book,
   } = props;
+  const disp = useDispatch();
   return (
     <div className="book">
 
-      <div className="book-info">
+      <div className="book-info" id={book.id}>
         <div className="book-info-h">
           <h4>{ book.genre }</h4>
           <h2>{ book.title }</h2>
@@ -16,7 +19,14 @@ function Book(props) {
         </div>
         <div className="book-info-actions">
           <button type="button" className="axn-btn" id="comment">Comments</button>
-          <button type="button" className="axn-btn" id="remo">Remove</button>
+          <button
+            type="button"
+            className="btn"
+            id="comment"
+            onClick={() => disp(removeBook(book))}
+          >
+            Remove
+          </button>
           <button type="button" className="axn-btn" id="edit">Edit</button>
         </div>
       </div>
