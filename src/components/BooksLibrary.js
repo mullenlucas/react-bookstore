@@ -3,11 +3,11 @@ import Book from './BooksGen';
 import Form from './Form';
 
 function BooksLibrary() {
-  const lib = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books);
   return (
     <>
       <div id="books-list">
-        {lib.map((book) => (
+        {books.map((book) => (
           <Book key={book.id} book={book} />
         ))}
       </div>
