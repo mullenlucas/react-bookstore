@@ -1,18 +1,16 @@
 // Status checker for categories
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const initialState = [];
-
 // Reducer section
-const reducerBookCategories = (state = initialState, action) => {
+const reducerBookCategories = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Pending...';
+      return 'Under Construction!';
     default: return state;
   }
 };
 
 // Action creators section
-export const statusChecker = (category) => ({ type: CHECK_STATUS, category });
+const statusChecker = () => ({ type: CHECK_STATUS });
 
-export default reducerBookCategories;
+export { reducerBookCategories, statusChecker };
