@@ -23,6 +23,25 @@ Coming soon !
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project uses the [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
+
+The ID created for this bookstore using said API has been obtained with the following commands:
+
+```
+const newId = async () => {
+  const answer = await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((data) => data.text());
+  return answer;
+};
+newId()
+
+<!-- Result: zwVIeRwTnQ0QK9JXqAm2 -->
+```
+
 **This project is for an exercise for the microverse program. Features may be added across exercise completions**
 
 ## To run this repository locally, these commands should be run on the directory's terminal:
