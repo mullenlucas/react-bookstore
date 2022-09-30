@@ -1,41 +1,28 @@
-// Actions for books
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-
-const initialState = [
-  {
-    id: 1,
-    title: 'Tyrant',
-    genres: 'History',
-    progress: 94,
-    author: 'Valerio Massimo Manfredi',
-    chapter: 24,
-  },
-  {
-    id: 2,
-    title: 'Harry Potter and the Prisoner of Azkaban',
-    genres: 'Fantasy',
-    progress: 34,
-    author: 'J.K. Rowling',
-    chapter: 9,
-  },
-  {
-    id: 3,
-    title: 'The Dreaming City',
-    genres: 'Fantasy',
-    progress: 16,
-    author: 'Michael Moorcock',
-    chapter: 3,
-  },
-];
+import { GET_BOOKS, ADD_BOOK, REMOVE_BOOK } from './booksAPI';
 
 // Reducer section
-const reducerBookstore = (state = initialState, action) => {
+const reducerBookstore = (state = [], action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return state.concat(action.book);
-    case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.book.id);
+    case `${ADD_BOOK}/fulfilled`:
+      return state.concat(action.meta.arg);
+    case `${REMOVE_BOOK}/fulfilled`:
+      return state.filter((book) => book.item_id !== action.meta.arg);
+    case `${GET_BOOKS}/fulfilled`:
+      return (
+        Object.keys(action.payload).map((key) => {
+          const {
+            title,
+            author,
+            category,
+          } = action.payload[key][0];
+          return ({
+            item_id: key,
+            title,
+            author,
+            category,
+          });
+        })
+      );
     default:
       return state;
   }
