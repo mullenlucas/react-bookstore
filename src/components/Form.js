@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBookToAPI } from '../redux/books/booksAPI';
 
 function Form() {
   const dispatch = useDispatch();
@@ -16,10 +16,11 @@ function Form() {
         <button
           type="button"
           onClick={() => {
-            dispatch(addBook({
+            dispatch(addBookToAPI({
+              item_id: uuidv4(),
               title: bookTitle,
               author: bookAuthor,
-              id: uuidv4(),
+              category: 'Unknown',
             }));
             setbookAuthor('');
             setbookTitle('');
