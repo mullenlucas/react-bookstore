@@ -11,7 +11,7 @@ function Book(props) {
 
       <div className="book-info" id={book.item_id}>
         <div className="book-info-h">
-          <h4>{ book.genres }</h4>
+          <h4>{ book.category }</h4>
           <h2>{ book.title }</h2>
           <h3>{ book.author }</h3>
         </div>

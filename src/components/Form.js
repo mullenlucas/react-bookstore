@@ -7,12 +7,36 @@ function Form() {
   const dispatch = useDispatch();
   const [bookTitle, setbookTitle] = useState('');
   const [bookAuthor, setbookAuthor] = useState('');
+  const [bookCategory, setbookCategory] = useState('');
   return (
     <div id="add-div">
-      <h2>Add a New Book!</h2>
+      <h2>ADD NEW BOOK</h2>
       <form id="add-book-form">
         <input id="book-title" value={bookTitle} onInput={(e) => setbookTitle(e.target.value)} placeholder="Book Title" type="text" />
         <input id="book-author" value={bookAuthor} onInput={(e) => setbookAuthor(e.target.value)} placeholder="Book Author" type="text" />
+        <select
+          id="form-categ"
+          onChange={(e) => {
+            setbookCategory(e.target.value);
+          }}
+          required
+        >
+          <option value="">Category</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Horror">Horror</option>
+          <option value="Historical">Historical</option>
+          <option value="Romance">Romance</option>
+          <option value="Western">Western</option>
+          <option value="Science">Science</option>
+          <option value="Economy">Economy</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Self-help">Self-help</option>
+          <option value="Magical Realism">Magical Realism</option>
+
+        </select>
         <button
           type="button"
           onClick={() => {
@@ -20,7 +44,7 @@ function Form() {
               item_id: uuidv4(),
               title: bookTitle,
               author: bookAuthor,
-              category: 'Unknown',
+              category: bookCategory,
             }));
             setbookAuthor('');
             setbookTitle('');
