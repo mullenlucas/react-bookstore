@@ -9,7 +9,7 @@ function Book(props) {
   return (
     <div className="book">
 
-      <div className="book-info" id={book.id}>
+      <div className="book-info" id={book.item_id}>
         <div className="book-info-h">
           <h4>{ book.genres }</h4>
           <h2>{ book.title }</h2>
