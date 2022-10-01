@@ -6,7 +6,7 @@ function Categories() {
   const info = useSelector((state) => state.categories);
   const dispatch = useDispatch();
   return (
-    <div className="categ-sec">
+    <div className="categ-sec f-col">
       <button
         type="button"
         id="check-status"
