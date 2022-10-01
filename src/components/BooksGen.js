@@ -17,6 +17,7 @@ function Book(props) {
         </div>
         <div className="book-info-actions">
           <button type="button" className="axn-btn" id="comment">Comments</button>
+          <div className="line-div" />
           <button
             type="button"
             className="axn-btn"
@@ -25,22 +26,26 @@ function Book(props) {
           >
             Remove
           </button>
+          <div className="line-div" />
           <button type="button" className="axn-btn" id="edit">Edit</button>
         </div>
       </div>
 
       <div className="book-progress">
         <h3 className="book-percentage">
-          { book.progress }
-          {' '}
+          {Math.floor(Math.random() * 101)}
           %
         </h3>
         <h4 className="book-completion">Completed</h4>
       </div>
+      <div className="line-p-div" />
 
       <div className="progression">
         <h3 className="book-chapter">Current Chapter</h3>
-        <h2>{ book.chapter }</h2>
+        <h2 className="book-chapter-number">
+          Chapter &nbsp;
+          {Math.floor(Math.random() * 60)}
+        </h2>
         <button type="button" className="prog-btn">Update progress</button>
       </div>
 

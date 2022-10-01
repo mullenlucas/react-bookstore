@@ -10,6 +10,7 @@ function Form() {
   const [bookCategory, setbookCategory] = useState('');
   return (
     <div id="add-div">
+      <div className="add-book-line-div" />
       <h2>ADD NEW BOOK</h2>
       <form id="add-book-form">
         <input id="book-title" value={bookTitle} onInput={(e) => setbookTitle(e.target.value)} placeholder="Book Title" type="text" />
@@ -22,6 +23,9 @@ function Form() {
           required
         >
           <option value="">Category</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Biography">Biography</option>
+          <option value="Poetry">Poetry</option>
           <option value="Sci-Fi">Sci-Fi</option>
           <option value="Mystery">Mystery</option>
           <option value="Thriller">Thriller</option>
@@ -31,13 +35,14 @@ function Form() {
           <option value="Western">Western</option>
           <option value="Science">Science</option>
           <option value="Economy">Economy</option>
+          <option value="Graphic-Novel">Graphic Novel</option>
           <option value="Psychology">Psychology</option>
+          <option value="Dystopia">Dystopia</option>
           <option value="Fantasy">Fantasy</option>
           <option value="Self-help">Self-help</option>
-          <option value="Magical Realism">Magical Realism</option>
-
         </select>
         <button
+          className="add-book-btn"
           type="button"
           onClick={() => {
             dispatch(addBookToAPI({
