@@ -12,7 +12,7 @@ function Form() {
     <div id="add-div" className="f-col">
       <div className="add-book-line-div" />
       <h2>ADD NEW BOOK</h2>
-      <form id="add-book-form">
+      <form id="add-book-form" className="flexd">
         <input id="book-title" value={bookTitle} onInput={(e) => setbookTitle(e.target.value)} placeholder="Book Title" type="text" />
         <input id="book-author" value={bookAuthor} onInput={(e) => setbookAuthor(e.target.value)} placeholder="Book Author" type="text" />
         <select
