@@ -10,7 +10,7 @@ function Book(props) {
   const dispatch = useDispatch();
   const perc = Math.floor(Math.random() * 101);
   return (
-    <div className="book">
+    <div className="book flexd">
 
       <div className="book-info" id={book.item_id}>
         <div className="book-info-h">
@@ -18,7 +18,7 @@ function Book(props) {
           <h2>{ book.title }</h2>
           <h3>{ book.author }</h3>
         </div>
-        <div className="book-info-actions">
+        <div className="book-info-actions flexd">
           <button type="button" className="axn-btn" id="comment">Comments</button>
           <div className="line-div" />
           <button
@@ -34,9 +34,9 @@ function Book(props) {
         </div>
       </div>
 
-      <div className="book-progress">
+      <div className="book-progress flexd">
         <CircularProgressbar value={perc} className="circ-progress" styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <div className="prog-col">
+        <div className="f-col">
           <h3 className="book-percentage">
             {perc}
             %

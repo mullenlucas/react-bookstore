@@ -9,7 +9,7 @@ function Form() {
   const [bookAuthor, setbookAuthor] = useState('');
   const [bookCategory, setbookCategory] = useState('');
   return (
-    <div id="add-div">
+    <div id="add-div" className="f-col">
       <div className="add-book-line-div" />
       <h2>ADD NEW BOOK</h2>
       <form id="add-book-form">

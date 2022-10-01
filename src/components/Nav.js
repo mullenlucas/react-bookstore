@@ -4,8 +4,8 @@ import userImg from '../media/user-img.png';
 
 function Header() {
   return (
-    <header>
-      <div className="h-links">
+    <header className="flexd">
+      <div className="h-links flexd">
         <h1>Bookstore CMS</h1>
         <NavLink to="/" className="link">Books</NavLink>
         <NavLink to="/categories" className="link">Categories</NavLink>
