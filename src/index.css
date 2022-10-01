@@ -17,16 +17,21 @@ body {
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 2.4rem;
   align-items: center;
   border-bottom: solid 1px #e8e8e8;
+  width: 100%;
 }
 
 .h-links {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   gap: 3rem;
+  font-family: var(--font-mont);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 .h-links h1 {
@@ -34,28 +39,21 @@ header {
   width: 100%;
   font-weight: bold;
   white-space: nowrap;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
 }
 
 .link {
   text-decoration: none;
-  font-family: var(--font-mont);
   color: #121212;
   text-transform: uppercase;
   font-size: 0.813rem;
   font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.9px;
-  float: left;
 }
 
 #user-pic {
-  padding: 0.5rem;
+  padding: 0 4.2rem;
   background-color: #fafafa;
   border-radius: 100%;
 }
@@ -65,20 +63,20 @@ header {
   height: auto;
 }
 
-#main-sec {
+.f-col {
   display: flex;
-  align-items: center;
   flex-direction: column;
+}
+
+#main-sec {
+  align-items: center;
   gap: 4rem;
   padding-top: 1.6rem;
 }
 
 #books-list {
-  display: flex;
-  flex-direction: column;
   width: 88%;
   gap: 1rem;
-  list-style-type: none;
 }
 
 .book {
@@ -93,6 +91,10 @@ header {
 .book-info {
   min-width: 400px;
   font-family: var(--font-robo);
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .book-info-h h4 {
@@ -103,10 +105,6 @@ header {
   font-family: var(--font-mont);
   font-size: 0.875rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #121212;
 }
 
@@ -116,7 +114,6 @@ header {
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: normal;
   color: #4386bf;
 }
 
@@ -133,10 +130,6 @@ header {
   font-family: var(--font-robo);
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4386bf;
 }
 
@@ -150,29 +143,24 @@ header {
 .book-progress {
   font-family: var(--font-mont);
   color: #121212;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
 }
 
 .book-percentage {
   font-size: 2rem;
   font-weight: normal;
   margin: 0;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
 }
 
 .book-completion {
   width: 5rem;
   height: 1.125rem;
   opacity: 0.5;
-  font-family: var(--font-mont);
   font-size: 0.875rem;
   font-weight: normal;
-  font-stretch: normal;
   margin: 0;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 .line-p-div {
@@ -186,25 +174,24 @@ header {
   color: #121212;
 }
 
+.progression > * {
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
 .book-chapter {
   height: 1.125rem;
   opacity: 0.5;
   text-transform: uppercase;
   font-size: 0.813rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
 }
 
 .book-chapter-number {
   height: 1.313rem;
   font-size: 1rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.4px;
 }
 
@@ -214,10 +201,6 @@ header {
   text-transform: uppercase;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   font-size: 0.813rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
   border: none;

@@ -14,7 +14,7 @@ function BooksLibrary() {
   const books = useSelector((state) => state.books, shallowEqual);
   return (
     <>
-      <div id="books-list">
+      <div id="books-list" className="f-col">
         {books.map((book) => (
           <Book key={book.item_id} book={book} />
         ))}

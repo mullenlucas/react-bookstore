@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <section id="main-sec">
+      <section id="main-sec" className="f-col">
         <Outlet />
       </section>
     </div>
