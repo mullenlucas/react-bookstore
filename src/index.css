@@ -100,7 +100,7 @@ header {
   height: 1.125rem;
   margin: 0 4rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: var(--font-mont);
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -126,11 +126,10 @@ header {
 
 .axn-btn {
   background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	outline: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
   font-family: var(--font-robo);
   font-size: 0.875rem;
   font-weight: 300;
@@ -253,7 +252,8 @@ header {
   color: #888;
 }
 
-#book-title, #book-author {
+#book-title,
+#book-author {
   margin: 0 1.2rem 0 0;
   padding: 0.813rem 4.2rem 0.813rem 1.063rem;
   border-radius: 4px;
