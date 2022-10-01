@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { useDispatch } from 'react-redux';
 import { removeBookToAPI } from '../redux/books/booksAPI';
 
 function Book(props) {
   const { book } = props;
   const dispatch = useDispatch();
+  const perc = Math.floor(Math.random() * 101);
   return (
     <div className="book">
 
@@ -32,11 +35,14 @@ function Book(props) {
       </div>
 
       <div className="book-progress">
-        <h3 className="book-percentage">
-          {Math.floor(Math.random() * 101)}
-          %
-        </h3>
-        <h4 className="book-completion">Completed</h4>
+        <CircularProgressbar value={perc} className="circ-progress" styles={buildStyles({ strokeLinecap: 'butt' })} />
+        <div className="prog-col">
+          <h3 className="book-percentage">
+            {perc}
+            %
+          </h3>
+          <h4 className="book-completion">Completed</h4>
+        </div>
       </div>
       <div className="line-p-div" />
 
